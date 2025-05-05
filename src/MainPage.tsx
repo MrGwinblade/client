@@ -22,6 +22,9 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky; /* Добавляем sticky */
+  top: 0; /* Прилипает к верхней части экрана */
+  z-index: 1000; /* Убедимся, что header поверх других элементов */
 `;
 
 
@@ -87,21 +90,21 @@ const StyledButton = styled(Button)`
 `;
 
 const Footer = styled.footer`
-   border-top: 1px solid #f0f0f0;
-   display: flex;
-   flex-direction: column;
-   min-height: 300px; /* Минимальная высота футера - вся страница */
- `;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto; /* Push footer to the bottom of the flex container */
+  position: sticky; /* Sticky footer */
+  bottom: 0; /* Stick to the bottom of the viewport */
+  z-index: 1000; /* Ensure footer is above other content */
+  background-color: #fff; /* Ensure footer has a background */
+`;
  
  const FooterContent = styled.div`
    padding: 20px;
    text-align: center;
  `;
  
- const DarkBlock = styled.div`
-   flex: 1; /* Занимает оставшееся пространство */
-   background-color: #333; /* Тёмный цвет */
- `;
 
 const MainPage: React.FC = () => {
 
@@ -209,7 +212,6 @@ const MainPage: React.FC = () => {
             Some Company 2024
           </Paragraph>
         </FooterContent>
-        <DarkBlock />
       </Footer>
     </Main>
   );

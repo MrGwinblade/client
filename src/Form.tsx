@@ -20,13 +20,16 @@ import React, { useState } from 'react';
 
    // Стилизованные компоненты
    const Header = styled.header`
-     padding: 20px;
-     background-color: #fff;
-     border-bottom: 1px solid #f0f0f0;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-   `;
+   padding: 20px;
+   background-color: #fff;
+   border-bottom: 1px solid #f0f0f0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: sticky; /* Добавляем sticky */
+   top: 0; /* Прилипает к верхней части экрана */
+   z-index: 1000; /* Убедимся, что header поверх других элементов */
+ `;
 
    const Main = styled.main`
      
@@ -77,9 +80,13 @@ import React, { useState } from 'react';
    border-top: 1px solid #f0f0f0;
    display: flex;
    flex-direction: column;
-   min-height: 300px  ; /* Минимальная высота футера - вся страница */
+   min-height: 300px;
+   margin-top: auto; /* Push footer to the bottom of the flex container */
+   position: sticky; /* Sticky footer */
+   bottom: 0; /* Stick to the bottom of the viewport */
+   z-index: 1000; /* Ensure footer is above other content */
+   background-color: #fff; /* Ensure footer has a background */
  `;
- 
  const FooterContent = styled.div`
    padding: 20px;
    text-align: center;
