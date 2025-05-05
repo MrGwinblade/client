@@ -18,7 +18,6 @@ const Main = styled.main`
 const Header = styled.header`
   padding: 20px;
   background-color: #fff;
-  border-bottom: 1px solid #f0f0f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,6 +39,8 @@ const MainSection = styled.section`
   text-align: center;
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
 `;
 
 const SubMainSection = styled.div`
@@ -75,6 +76,8 @@ const FooterSection = styled.section`
   padding: 20px;
   background-color: #fafafa;
   text-align: center;
+  border-top: 1px solid #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
 `;
 
 const StyledButton = styled(Button)`

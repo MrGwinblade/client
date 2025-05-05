@@ -22,7 +22,6 @@ import React, { useState } from 'react';
    const Header = styled.header`
    padding: 20px;
    background-color: #fff;
-   border-bottom: 1px solid #f0f0f0;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -36,7 +35,7 @@ import React, { useState } from 'react';
      Width: 80%;
      justify-content: center;
      margin: 0 auto;
-     
+
    `;
 
    const Logo = styled.div`
@@ -45,14 +44,15 @@ import React, { useState } from 'react';
    `;
 
    const MainSection = styled.section`
-     background-color: #fafafa;
-     text-align: center;
-     padding: 40px 20px;
-     min-height: 600px;
-
-     display: flex;
-     flex-direction: column;
-      justify-content: center;
+    background-color: #fafafa;
+    text-align: center;
+    padding: 40px 20px;
+    min-height: 5 00px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
    `;
 
    const FormContainer = styled(AntForm)`
