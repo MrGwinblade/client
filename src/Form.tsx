@@ -80,7 +80,7 @@ import React, { useState } from 'react';
    border-top: 1px solid #f0f0f0;
    display: flex;
    flex-direction: column;
-   min-height: 300px;
+   min-height: 250px;
    margin-top: auto; /* Push footer to the bottom of the flex container */
    position: sticky; /* Sticky footer */
    bottom: 0; /* Stick to the bottom of the viewport */
